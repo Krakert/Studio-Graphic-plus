@@ -2,19 +2,19 @@
 import Layout from '../layouts/MainLayout.astro';
 ---
 
-<Layout title="Studio Graphic &#8314">
-	<main>
-		<div class="relative flex justify-center font-mono text-4xl"> 
-			Welcome to <pre><span class="text-gradient"> Studio Graphic + </span></pre> \\ Development environment
-		</div>
-	</main>
+<Layout title="Studio Graphic&#8314">
+	<!-- <main> -->
+		<video playsinline autoplay muted>
+			<source src="vid/main.mp4" type="video/mp4">
+		</video>
+	<!-- </main> -->
 </Layout>
 
 <style>
-	main {
+	/* main {
 		margin: auto;
 		padding: 2.5rem;
-	}
+	} */
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;

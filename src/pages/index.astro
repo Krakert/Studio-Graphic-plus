@@ -1,20 +1,15 @@
 ---
-import Layout from '../layouts/MainLayout.astro';
+import Layout from "../layouts/MainLayout.astro";
 ---
 
-<Layout title="Studio Graphic&#8314">
-	<!-- <main> -->
-		<video playsinline autoplay muted>
-			<source src="vid/main.mp4" type="video/mp4">
-		</video>
-	<!-- </main> -->
+<Layout title="Studio Graphic⁺">
+	<div id="animation"></div>
 </Layout>
 
 <style>
-	/* main {
-		margin: auto;
-		padding: 2.5rem;
-	} */
+	animation {
+		padding: 4cm;
+	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -23,3 +18,19 @@ import Layout from '../layouts/MainLayout.astro';
 		background-position: 0%;
 	}
 </style>
+
+<script>
+	import lottie from "lottie-web";
+
+	const element = document.getElementById("animation");
+
+	if (element) {
+		lottie.loadAnimation({
+			container: element,
+			renderer: "svg",
+			loop: false,
+			autoplay: true,
+			path: "/data.json",
+		});
+	}
+</script>

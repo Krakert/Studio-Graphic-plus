@@ -10,12 +10,11 @@ import Layout from "../layouts/MainLayout.astro";
 	animation {
 		padding: 4cm;
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	html,
+	body {
+		margin: 0;
+		height: 100%;
+		overflow: hidden;
 	}
 </style>
 

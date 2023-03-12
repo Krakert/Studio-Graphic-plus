@@ -1,25 +1,23 @@
 ---
-import Layout from '../layouts/MainLayout.astro';
+import Layout from "../layouts/MainLayout.astro";
 ---
 
-<Layout title="Studio Graphic&#8314">
-	<main>
-		<div class="relative flex justify-center font-mono text-4xl"> 
-			Welcome to <pre><span class="text-gradient"> Studio Graphic + </span></pre>
-		</div>
-	</main>
+<Layout title="Studio Graphic⁺">
+	<div id="animation" class="p-24 flex flex-wrap h-screen"></div>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 2.5rem;
+<script>
+	import lottie from "lottie-web";
+
+	const element = document.getElementById("animation");
+
+	if (element) {
+		lottie.loadAnimation({
+			container: element,
+			renderer: "svg",
+			loop: false,
+			autoplay: true,
+			path: "/data.json",
+		});
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-</style>
+</script>

@@ -3,21 +3,8 @@ import Layout from "../layouts/MainLayout.astro";
 ---
 
 <Layout title="Studio Graphic⁺">
-	<div id="animation"></div>
+	<div id="animation" class="flex flex-wrap h-screen md:px-24"></div>
 </Layout>
-
-<style>
-	animation {
-		padding: 4cm;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-</style>
 
 <script>
 	import lottie from "lottie-web";
